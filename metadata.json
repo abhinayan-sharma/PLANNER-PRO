@@ -1,0 +1,8 @@
+{
+  "name": "Planner PRO",
+  "description": "A fully automatic, AI-powered study planner that creates weekly schedules, manages your time, creates visual aids, and provides a real-time voice tutor.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

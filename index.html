@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Planner PRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6366f1',
+              secondary: '#8b5cf6',
+              accent: '#f43f5e',
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+
+      /* Markdown Styling for Chat */
+      .prose-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1em 0;
+        font-size: 0.9em;
+        background-color: #ffffff; /* Ensure background is white */
+        color: #000000; /* Force text to be black */
+      }
+      .prose-content th {
+        background-color: #e2e8f0;
+        color: #000000; /* Force header text to be black */
+        font-weight: 700;
+        text-align: left;
+        padding: 10px 12px;
+        border: 1px solid #cbd5e1;
+      }
+      .prose-content td {
+        padding: 8px 12px;
+        border: 1px solid #cbd5e1;
+        color: #000000; /* Force cell text to be black */
+      }
+      .prose-content tr:nth-child(even) {
+        background-color: #f8fafc; /* Zebra striping for better readability */
+      }
+      .prose-content ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+        margin: 0.5em 0;
+      }
+      .prose-content ol {
+        list-style-type: decimal;
+        padding-left: 1.5em;
+        margin: 0.5em 0;
+      }
+      .prose-content strong {
+        color: #000000;
+        font-weight: 800;
+      }
+      .prose-content h1, .prose-content h2, .prose-content h3 {
+        font-weight: 800;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: #0f172a;
+      }
+      .prose-content p {
+        margin-bottom: 0.5em;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "marked": "https://esm.run/marked"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
